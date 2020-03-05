@@ -18,8 +18,7 @@ public class PoolManager {
         pooledObjects = new LinkedBlockingQueue<>(1_000);
         for (int i = 0; i <= 1_000; i++) {
             pooledObjects.offer(new Object());
-        }
-    }
+        }    }
 
     @AccessTimeout(value = 30, unit = TimeUnit.SECONDS)
     @Lock(LockType.WRITE)
